@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdullah Almutawakel – CV</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 15px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: white;
+      padding: 35px 20px 25px;
+      text-align: center;
+    }
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .title {
+      font-size: 17px;
+      opacity: 0.95;
+      margin-bottom: 8px;
+    }
+    .location {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .contact i {
+      margin-right: 5px;
+      color: #60a5fa;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+    .col {
+      padding: 25px;
+    }
+    .section {
+      margin-bottom: 22px;
+    }
+    .section h2 {
+      font-size: 18px;
+      color: #1e3a8a;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #3b82f6;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section h2 i {
+      color: #3b82f6;
+    }
+    .profile {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #374151;
+    }
+    .competencies ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .competencies li {
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1e40af;
+      display: flex;
+      align-items: center;
+    }
+    .competencies li i {
+      margin-right: 8px;
+      color: #3b82f6;
+      font-size: 16px;
+    }
+    .job, .education li {
+      margin-bottom: 20px;
+    }
+    .job h3, .education h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .job h3 i, .education h3 i {
+      color: #3b82f6;
+    }
+    .job .company, .education .school {
+      font-weight: 600;
+      color: #1e3a8a;
+      margin-bottom: 4px;
+    }
+    .job .date, .education .date {
+      font-size: 14px;
+      color: #3b82f6;
+      display: block;
+      margin-bottom: 8px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .skill-cat h4 {
+      font-weight: 600;
+      color: #1e3a8a;
+      margin-bottom: 6px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .skill-cat h4 i {
+      color: #3b82f6;
+    }
+    .languages ul, .awards ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+    .languages li, .awards li {
+      padding: 10px;
+      background: white;
+      border-radius: 6px;
+      border-left: 3px solid #3b82f6;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+    .languages li i, .awards li i {
+      margin-right: 8px;
+      color: #3b82f6;
+      font-size: 16px;
+    }
+    .languages li strong, .awards li strong {
+      display: block;
+      color: #1e3a8a;
+    }
+    .publications li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+    }
+    .publications li i {
+      margin-right: 8px;
+      color: #3b82f6;
+      font-size: 16px;
+      margin-top: 4px;
+    }
+    @media (min-width: 769px) {
+      .content {
+        flex-direction: row;
+      }
+      .col-left {
+        flex: 1;
+        background: #f9fbfd;
+        border-right: 1px solid #e2e8f0;
+      }
+      .col-right {
+        flex: 2;
+      }
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .languages ul, .awards ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="name">Abdullah Mohammed Qasem Almutawakel, Ph.D.</div>
+      <div class="title"><i class="fas fa-laptop-code"></i> Digital Infrastructure & Utilities Cloud Engineer</div>
+      <div class="location"><i class="fas fa-map-marker-alt"></i> Bergen op Zoom, Netherlands</div>
+      <div class="contact">
+        <span><i class="fas fa-envelope"></i> aboud.aboud2012@gmail.com</span>
+        <span><i class="fas fa-phone"></i> +31 685435688</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="col col-left">
+        <div class="section">
+          <h2><i class="fas fa-user"></i> PROFILE</h2>
+          <p class="profile">Digital Infrastructure Engineer with a Ph.D. in Cloud & Distributed Systems, specialized in secure hybrid cloud platforms for utilities, municipalities and infrastructure operators. Strong expertise in cybersecurity, virtualization, and infrastructure digitalisation.</p>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-star"></i> CORE COMPETENCIES</h2>
+          <ul class="competencies">
+            <li><i class="fas fa-cloud"></i> Hybrid Cloud Architecture (VMware ESXi, Active Directory, CI/CD)</li>
+            <li><i class="fas fa-industry"></i> Utilities Digitalisation & Infrastructure Platforms</li>
+            <li><i class="fas fa-shield-alt"></i> Cybersecurity (SOPHOS Firewall, VPN, IAM)</li>
+            <li><i class="fas fa-database"></i> Oracle Databases</li>
+            <li><i class="fas fa-sync-alt"></i> High Availability & Disaster Recovery</li>
+            <li><i class="fas fa-network-wired"></i> Distributed Systems & Fuzzy Optimisation</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-language"></i> LANGUAGES</h2>
+          <ul class="languages">
+            <li><i class="fas fa-flag"></i> <strong>Arabic</strong> (Native)</li>
+            <li><i class="fas fa-flag"></i> <strong>English</strong> (Fluent)</li>
+            <li><i class="fas fa-flag"></i> <strong>French</strong> (Fluent)</li>
+            <li><i class="fas fa-flag"></i> <strong>Dutch</strong> (Advanced)</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-award"></i> AWARDS</h2>
+          <ul class="awards">
+            <li><i class="fas fa-trophy"></i> <strong>PhD Scholarship</strong> – Yemen Ministry of Higher Education (2016)</li>
+            <li><i class="fas fa-graduation-cap"></i> <strong>MSc/BSc Scholarships</strong> – Yemen Ministry of Higher Education (2011, 2005)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col col-right">
+        <div class="section">
+          <h2><i class="fas fa-briefcase"></i> PROFESSIONAL EXPERIENCE</h2>
+          <div class="job">
+            <h3><i class="fas fa-suitcase"></i> IT / Cloud Engineer</h3>
+            <div class="company">Yemen Company for Investment in Oil and Minerals</div>
+            <span class="date"><i class="far fa-calendar-alt"></i> 2013–Present</span>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Designed and operated hybrid cloud platforms supporting energy and public utility systems.</li>
+              <li><i class="fas fa-check-circle"></i> Built secure digital platforms for municipal and infrastructure operations.</li>
+              <li><i class="fas fa-check-circle"></i> Implemented SOPHOS firewall, VPN and IAM security for critical infrastructure services.</li>
+              <li><i class="fas fa-check-circle"></i> Automated CI/CD deployment pipelines improving system reliability.</li>
+              <li><i class="fas fa-check-circle"></i> Managed Oracle databases for asset registries, reporting and operational platforms.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3><i class="fas fa-code"></i> Systems Developer</h3>
+            <div class="company">Yemen Mobile</div>
+            <span class="date"><i class="far fa-calendar-alt"></i> 2009</span>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Supported telecom infrastructure platforms and internal digital services.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3><i class="fas fa-cogs"></i> IT Lab Administrator</h3>
+            <div class="company">Sana'a University</div>
+            <span class="date"><i class="far fa-calendar-alt"></i> 2008</span>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Managed campus network infrastructure and secured research IT environments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
+          <ul class="education">
+            <li>
+              <h3><i class="fas fa-mortar-board"></i> Ph.D. Computer Engineering</h3>
+              <div class="school">Mohamed Khider University, Algeria</div>
+              <span class="date"><i class="far fa-calendar"></i> 2022</span>
+            </li>
+            <li>
+              <h3><i class="fas fa-university"></i> M.Sc. Computer Engineering</h3>
+              <div class="school">Mohamed Khider University</div>
+              <span class="date"><i class="far fa-calendar"></i> 2015</span>
+            </li>
+            <li>
+              <h3><i class="fas fa-university"></i> B.Sc. Computer Engineering</h3>
+              <div class="school">Mohamed Khider University</div>
+              <span class="date"><i class="far fa-calendar"></i> 2010</span>
+            </li>
+            <li>
+              <h3><i class="fas fa-certificate"></i> Diploma – Microsoft Server Infrastructure</h3>
+              <span class="date"><i class="far fa-calendar"></i> 2008</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-laptop-code"></i> TECHNICAL SKILLS</h2>
+          <div class="skills">
+            <div class="skill-cat">
+              <h4><i class="fas fa-cloud"></i> Cloud & Infrastructure</h4>
+              <ul>
+                <li><i class="fas fa-server"></i> VMware ESXi</li>
+                <li><i class="fas fa-network-wired"></i> Active Directory</li>
+                <li><i class="fas fa-robot"></i> CI/CD</li>
+              </ul>
+            </div>
+            <div class="skill-cat">
+              <h4><i class="fas fa-database"></i> Databases</h4>
+              <ul>
+                <li><i class="fas fa-database"></i> Oracle SQL</li>
+              </ul>
+            </div>
+            <div class="skill-cat">
+              <h4><i class="fas fa-shield-alt"></i> Cybersecurity</h4>
+              <ul>
+                <li><i class="fas fa-firewall"></i> SOPHOS Firewall</li>
+                <li><i class="fas fa-key"></i> VPN</li>
+              </ul>
+            </div>
+            <div class="skill-cat">
+              <h4><i class="fas fa-code"></i> Programming</h4>
+              <ul>
+                <li><i class="fab fa-java"></i> Java</li>
+                <li><i class="fas fa-terminal"></i> Shell</li>
+                <li><i class="fas fa-database"></i> SQL</li>
+              </ul>
+            </div>
+            <div class="skill-cat">
+              <h4><i class="fas fa-chart-line"></i> Optimisation</h4>
+              <ul>
+                <li><i class="fas fa-brain"></i> Multi-agent systems</li>
+                <li><i class="fas fa-magic"></i> Fuzzy Logic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-book"></i> PUBLICATIONS (Selected)</h2>
+          <ul class="publications">
+            <li><i class="fas fa-file-alt"></i> <strong>Smart Design for IoT Resource Allocation</strong> – Informatica (2020)</li>
+            <li><i class="fas fa-file-alt"></i> <strong>Fuzzy-CSP Approach for Cloud Optimization</strong> – IJCA (2019)</li>
+            <li><i class="fas fa-file-alt"></i> <strong>Topology Optimization for Infrastructure-Oriented Lattice Structures</strong> – IJCIM (2021)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
